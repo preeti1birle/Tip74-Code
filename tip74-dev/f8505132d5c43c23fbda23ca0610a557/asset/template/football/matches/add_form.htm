@@ -1,0 +1,98 @@
+<div class="modal-body">
+	<div class="form-area">
+		<div class="form-group">
+			<form id="add_form" name="add_form" autocomplete="off" ng-init="getCompetitionList();getWeeks();getVenues()">
+				<hr>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<label class="control-label">Competition</label>
+							<select name="CompetitionGUID" class="form-control" ng-model="CompetitionGUID" ng-change="getLeagues(CompetitionGUID)">
+								<option value="">Select Competition</option>
+								<option ng-repeat="Competition in CompetitionList" ng-selected="formData.CompetitionGUID=='Competition.CompetitionGUID'" value="{{Competition.CompetitionGUID}}">{{Competition.CompetitionName}}</option>
+							</select>   
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">League</label>
+							<select name="LeagueGUID" id="LeagueGUID" class="form-control chosen-select" ng-model="LeagueGUID" ng-Change="getTeams(LeagueGUID)">
+								<option value="">Please Select</option>
+								<option ng-repeat="League in LeagueListData" ng-selected="formData.LeagueGUID=='League.LeagueGUID'" value="{{League.LeagueGUID}}"> {{League.LeagueName}}</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Week</label>
+							<select name="WeekGUID" id="WeekGUID" class="form-control chosen-select">
+								<option value="">Please Select</option>
+								<option ng-repeat="Week in WeekListData" ng-selected="formData.WeekGUID=='Week.WeekGUID'" value="{{Week.WeekGUID}}"> Week {{Week.WeekCount}} ({{Week.Status}})</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Team Local</label>
+							<select name="TeamGUIDLocal" class="form-control chosen-select" ng-model="formData.TeamGUIDLocal">
+								<option value="">Please Select</option>
+								<option ng-repeat="Team in TeamListData" ng-selected="formData.TeamGUIDLocal=='Team.TeamGUID'" value="{{Team.TeamGUID}}"> {{Team.TeamName}}</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Team Visitor</label>
+							<select name="TeamGUIDVisitor" id="TeamGUIDVisitor" ng-model="formData.TeamGUIDVisitor" class="form-control chosen-select">
+								<option value="">Please Select</option>
+								<option ng-repeat="Team in TeamListData" ng-selected="formData.TeamGUIDVisitor=='Team.TeamGUID'" value="{{Team.TeamGUID}}"> {{Team.TeamName}}</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Venue</label>
+							<select name="VenueID" id="VenueID" class="form-control chosen-select">
+								<option value="">Please Select</option>
+								<option ng-repeat="Venue in VenueListData" ng-selected="formData.VenueID=='Venue.VenueID'" value="{{Venue.VenueID}}"> {{Venue.VenueName}}, {{Venue.VenueCity}}</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Match Start Date Time</label>
+							<input type="datetime-local" min="" max="" class="form-control" id="MatchStartDateTime" name="MatchStartDateTime" ng-model="formData.MatchStartDateTime" value="{{formData.MatchStartDateTime}}">
+	
+						</div>
+						<!-- <div class="form-group">
+							<div class='col-sm-6'>
+								<div class='input-group date' id='datetimepicker1'>
+									<input type='text' class="form-control" />
+									<span class="input-group-addon">
+										<span class="glyphicon glyphicon-calendar"></span>
+									</span>
+								</div>
+							</div>
+						</div> -->
+					</div>
+				</div>
+				<!-- hidden parameters -->
+                <input type="hidden" name="TimeZoneIdentifire" ng-model="formData.TimeZoneIdentifire" value="{{formData.TimeZoneIdentifire}}">
+                <!-- hidden parameters /-->
+				
+			</form>
+		</div>
+
+	</div>
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+	<button type="submit" class="btn btn-success btn-sm" ng-disabled="editDataLoading" ng-click="addData()">Save</button>
+</div>

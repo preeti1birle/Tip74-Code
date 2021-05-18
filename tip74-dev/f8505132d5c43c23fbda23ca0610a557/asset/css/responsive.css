@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+@media (min-width:1200px){
+	
+
+}
+
+
+@media (min-width:992px) and (max-width:1199px){
+	
+	}
+	
+	
+	
+@media (min-width:768px) and (max-width:991px){
+	
+	}
+	
+@media (max-width:1450px){
+
+
+}	
+
+
+
+@media( max-width: 585px) {
+
+}	
+@media (max-width:767px){
+    .navbar-header {
+        display: flex;
+        align-items: center;
+    }
+    .sidebar_hide #mainFrame {
+        margin-left: 0px;
+    }
+    .sidebar_hide .navigation {
+        width: 170px;
+    }
+    #navbardrop {
+        font-size: 11px;
+    }
+}	

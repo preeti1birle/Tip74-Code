@@ -1,0 +1,42 @@
+<div class="modal-body">
+	<div class="form-area">
+		<form id="update_form" name="update_form" autocomplete="off" >
+			<div class="row">
+				<div class="col-md-12" style="text-align: center; margin-bottom: 10px;">
+					<div class="form-group">
+						<center><h3>{{formData.TeamNameLocal}} VS {{formData.TeamNameVisitor}}</h3></center>
+					</div>
+				</div>
+			</div>
+
+			<hr>
+			<div class="row">
+				<div class="col-md-7">
+					<div class="form-group">
+						<label class="control-label">Status</label>
+						<select name="MatchDisplay" id="MatchDisplay" ng-model="formData.MatchDisplay" class="form-control chosen-select">
+							<option value="">Please Select</option>
+							<option value="Enable" ng-selected="formData.MatchDisplay=='Enable'">Enable</option>
+							<option value="Disable" ng-selected="formData.MatchDisplay=='Disable'">Disable</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-7">
+					<button ng-if="formData.IsPlayingXINotificationSent == 'No'" ng-click="Playing11Notification(formData.MatchGUID)">Playing11</button>
+					<button ng-if="formData.Status == 'Pending'" ng-click="makeLive(formData.MatchGUID)">Go Live</button>
+				</div>
+			</div>
+			<!-- hidden parameters -->
+			<input type="hidden" name="MatchGUID" value="{{formData.MatchGUID}}">
+			<!-- hidden parameters /-->
+		</form>
+
+	</div>
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+	<button type="submit" class="btn btn-success btn-sm" ng-disabled="editDataLoading" ng-click="editStatusMatchDisplay(formData.MatchDisplay,formData.MatchGUID)">Save</button>
+</div>
+
+

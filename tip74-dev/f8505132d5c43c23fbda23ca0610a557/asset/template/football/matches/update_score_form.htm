@@ -1,0 +1,117 @@
+<div class="modal-body">
+	<div class="form-area">
+		<div class="form-group">
+            <form id="add_form" name="update_score_form" autocomplete="off">
+                <hr>
+                <div class="row" style="text-align: center;">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <img ng-src="{{formData.TeamFlagLocal}}" width="100px" height="50px">
+                        </div>
+                        <div class="form-group">
+                            <p><strong>{{formData.TeamNameLocal}}</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- <div class="form-group"> -->
+                            <h6 class="display-4 text-muted">v/s</h6>
+                        <!-- </div> -->
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <img ng-src="{{formData.TeamFlagVisitor}}" width="100px" height="50px">
+                        </div>
+                        <div class="form-group">
+                            <p><strong>{{formData.TeamNameVisitor}}</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Half Time Local Team Score</label>
+                            <input class="form-control" type="number" min="0" placeholder="Half Time Local Team Score"
+                             name="HalfTimeLocalTeamScore" ng-model="formData.HalfTimeLocalTeamScore" 
+                             value="{{formData.HalfTimeLocalTeamScore}}" ng-disabled="formData.MatchStatus=='Completed'? true:false" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Half Time Visitor Team Score</label>
+                            <input class="form-control" type="number" min="0" placeholder="Half Time Visitor Team Score" ng-disabled="formData.MatchStatus=='Completed'? true:false"
+                             name="HalfTimeVisitorTeamScore" ng-model="formData.HalfTimeVisitorTeamScore" value="{{formData.HalfTimeVisitorTeamScore}}" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Full Time Local Team Score</label>
+                            <input class="form-control" type="number" min="0" placeholder="Full Time Local Team Score" ng-disabled="formData.MatchStatus=='Completed'? true:false" 
+                            name="FullTimeLocalTeamScore" ng-model="formData.FullTimeLocalTeamScore" value="{{formData.FullTimeLocalTeamScore}}" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Full Time Visitor Team Score</label>
+                            <input class="form-control" type="number" min="0" placeholder="Full Time Visitor Team Score" ng-disabled="formData.MatchStatus=='Completed'? true:false"
+                             name="FullTimeVisitorTeamScore" ng-model="formData.FullTimeVisitorTeamScore" value="{{formData.FullTimeVisitorTeamScore}}" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Winner Team</label>
+                            <select name="WinnerTeam" id="WinnerTeam" class="form-control chosen-select" ng-disabled="formData.MatchStatus=='Completed'? true:false"
+                             ng-model="formData.WinnerTeam" ng-Change="getTeamGuID(formData)">
+                                <option value="">Please Select</option>
+                                <option value="Local" ng-selected="formData.WinnerTeam=='Local'">Local</option>
+                                <option value="Visitor" ng-selected="formData.WinnerTeam=='Visitor'">Visitor</option>
+                                <option value="Draw" ng-selected="formData.WinnerTeam=='Draw'">Draw</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Status</label>
+                            <select name="Status" id="Status" class="form-control chosen-select" ng-disabled="formData.MatchStatus=='Completed'? true:false"
+                             ng-model="formData.Status">
+                                <option value="">Please Select</option>
+                                <option value="Pending" ng-selected="formData.Status=='Pending'">Pending</option>
+                                <option value="Running" ng-selected="formData.Status=='Running'">Running</option>
+                                <option value="Completed" ng-selected="formData.Status=='Completed'">Completed</option>
+                                <!-- <option value="Cancelled" ng-selected="formData.Status=='Cancelled'">Cancelled</option> -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group" ng-show="formData.Status=='Completed'">
+                            <label class="control-label">Longest Odds</label>
+                            <select name="LongestOdds" id="LongestOdds" class="form-control chosen-select" ng-disabled="formData.MatchStatus=='Completed'? true:false"
+                             ng-model="formData.LongestOdds">
+                                <option value="">Please Select</option>
+                                <option value="Home" ng-selected="formData.LongestOdds=='Home'">Home</option>
+                                <option value="Away" ng-selected="formData.LongestOdds=='Away'">Away</option>
+                                <option value="Draw" ng-selected="formData.LongestOdds=='Draw'">Draw</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- hidden parameters -->
+                <input type="hidden" name="WinnerTeamGUID" ng-model="formData.WinnerTeamGUID" value="{{formData.WinnerTeamGUID}}">
+                <input type="hidden" name="MatchGUID" value="{{formData.MatchGUID}}">
+                <!-- hidden parameters /-->
+                
+            </form>
+        </div>
+	</div>
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-secondary btn-sm" ng-disabled="editDataLoading || formData.MatchStatus=='Completed'? true:false" data-dismiss="modal">Cancel</button>
+	<button type="submit" class="btn btn-success btn-sm" ng-disabled="editDataLoading || formData.MatchStatus=='Completed'? true:false" ng-click="updateScore()">Save</button>
+</div>

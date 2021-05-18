@@ -1,0 +1,70 @@
+<div class="modal-body">
+	<div class="form-area">
+		<div class="form-group">
+            <div class="form-group">
+                <div id="picture-box" class="picture-box banner">
+                    <!-- picture display -->
+                    <img id="picture-box-picture" ng-if="!formData.LeagueFlag" ng-src="./asset/img/default-category.png">
+                    <img id="picture-box-picture" ng-if="formData.LeagueFlag" ng-src="{{formData.LeagueFlag}}">
+
+                    <!-- picture upload form -->
+                    <div class="picture-upload">
+                        <img src="./asset/img/upload.svg" id="picture-uploadBtn">
+                        <form enctype="multipart/form-data" action="../api/upload/image" method="post" name="picture_upload_form" id="picture_upload_form">
+                            <input type="hidden" name="Section" value="LeagueFlag">
+                            <input type="file" accept="image/*" name="File" id="fileInput" data-target="#picture-box #picture-box-picture" data-targetinput="#MediaGUIDs">
+                        </form>
+                    </div>
+                    <!-- progressbar -->
+                    <div class="progressBar">
+                        <div class="bar"></div>
+                        <div class="percent">0%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="form-group">
+			<form id="add_form" name="add_form" autocomplete="off" >
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">Competition</label>
+                            <select name="CompetitionGUID" class="form-control" ng-model="formData.CompetitionGUID">
+                                <option value="">Select Competition</option>
+                                <option ng-repeat="Competition in CompetitionList" ng-selected="formData.CompetitionGUID=='Competition.CompetitionGUID'" value="{{Competition.CompetitionGUID}}">{{Competition.CompetitionName}}</option>
+                            </select>   
+                        </div>
+                    </div>
+                </div>
+				<div class="row">
+                    
+					<div class="col-md-12">
+						<div class="form-group">
+							<label class="control-label">League Name</label>
+							<input type="text" id="LeagueName" placeholder="League Name" class="form-control" name="LeagueName" ng-model="formData.LeagueName" value="{{formData.LeagueName}}">
+						</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12"> 
+                        <div class="form-group">
+                            <label class="control-label">Season</label>
+                            <select name="SeasonID" class="form-control" ng-model="SeasonID">
+                                <option value="">Select Season</option>
+                                <option ng-repeat="season in SeasonList" ng-selected="formData.SeasonID=='season.SeasonID'" value="{{season.SeasonID}}">Season {{season.SeasonName}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>		
+				<input type="hidden" class="MediaGUIDs" id="MediaGUIDs" name="MediaGUIDs" value=""> <!-- for banner -->
+				<!-- hidden parameters /-->
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+	<button type="submit" class="btn btn-success btn-sm" ng-disabled="editDataLoading" ng-click="addData()">Save</button>
+</div>
+

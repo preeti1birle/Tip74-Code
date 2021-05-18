@@ -1,0 +1,10 @@
+0 0 * * * wget -qO- http://*****/tip74-dev/api/utilities/getSeasonsLiveFootball
+0 0 * * * wget -qO- http://*****/tip74-dev/api/utilities/getLeaguesLiveFootball
+0 */4 * * * wget -qO- http://*****/tip74-dev/api/utilities/getLeagueRoundsLiveFootball
+0 */4 * * * wget -qO- http://*****/tip74-dev/api/utilities/getSeasonWeeksLiveFootball
+0 0 * * * wget -qO- http://*****/tip74-dev/api/utilities/getVenuesLiveFootball
+0 0 * * * wget -qO- http://*****/tip74-dev/api/utilities/getTeamsLiveFootball
+0 */2 * * * wget -qO- http://*****/tip74-dev/api/utilities/getTeamsStandingsLiveFootball
+0 */12 * * * wget -qO- http://*****/tip74-dev/api/utilities/getMatchesLiveFootball
+*/3 * * * * wget -qO- http://*****/tip74-dev/api/utilities/getMatchScoreLiveFootball
+0 */2 * * * wget -qO- http://*****/tip74-dev/api/utilities/getMatchTeamLineUpsLiveFootball

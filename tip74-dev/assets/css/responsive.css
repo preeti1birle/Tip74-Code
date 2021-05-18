@@ -1,0 +1,683 @@
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+	.home_banner .carousel-caption {
+	    top: 5%;
+	}
+	.home_banner .carousel-indicators {
+	    bottom: 35px;
+	}
+	.styled-checkbox:checked+label:after {
+	    left: 44px;
+	}
+	.live-result-inner .matchStatus .styled-checkbox:checked+label:after {
+	    left: 49px;
+	}
+	.liveSec .teamAndTime img {
+	    margin: 0 10px 0 0 !important;
+	}
+	.liveSec .teamAndTime span:nth-child(2) {
+	    min-width: 120px;
+	    max-width: 120px;
+        white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	}
+	.liveSec .teamAndTime span:last-child {
+	    padding-left: 10px;
+	}
+	.common_table th, .common_table td {
+	    padding: .45em;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	.myentryMetaWrapr a{
+	    padding: 15px !important	;
+	}
+	ul.account_grid li {
+	    flex: 0 0 calc(33.33% - 10px);
+	}
+	ul.account_grid{
+		justify-content: space-between;
+	}
+	.match-details ul li div {
+	    flex: 0 0 23%;
+	}
+	.match-details ul li div:nth-child(2) {
+	    flex: 0 0 54%;
+	}
+	.match-details ul li .teams div:first-child img {
+	    margin-right: 10px;
+	}
+	.match-details ul li .teams div:last-child img {
+	    margin-left: 10px;
+	}
+	.dashboard .tab-pane .time span:nth-child(2) {
+	    margin: 0 5px;
+	}
+	.styled-checkbox:checked+label:after {
+	    left: 57px;
+	}
+	.live-result-inner .matchStatus .styled-checkbox:checked+label:after {
+	    left: 62px;
+	}	
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .soccer-horseRacing {
+	    flex-wrap: wrap;
+	}
+    .soccer-horseRacing .img-box:nth-child(2) {
+    	justify-content: center;
+    }
+    .soccer-horseRacing .img-box:nth-child(2) > img {
+        width: 100%;
+	    max-height: 500px;
+	    object-fit: cover;
+    }
+    .soccer-horseRacing .cntr-line {
+	    margin: 50px 0 !important;
+    }
+    .match-details ul li::before {
+		height: 60px;
+	}
+	.styled-checkbox:checked+label:after {
+	    left: 28px;
+	}
+	.live-result-inner .matchStatus .styled-checkbox:checked+label:after {
+	    left: 32px;
+	    top: -3px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.liveSec .teamAndTime span:nth-child(2) {
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	    overflow: hidden;
+	    max-width: 115px;
+	}
+}
+
+@media screen and (min-width: 992px) {
+    .table-responsive {
+	    overflow: unset;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.creditedScore.table-responsive {
+	    overflow: unset;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.header .navbar {
+	    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+	}
+	.navbar .nav-item .nav-link {
+	    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	}
+	.navbar .nav-item:hover .nav-link, .navbar .nav-item.active .nav-link {
+		border-color: var(--primaryClr);
+	}
+	.navbar .social-links {
+		margin-top: 15px;
+		margin-bottom: 6px;
+	}
+	.navbar-nav .dropdown-menu {
+		background: transparent;
+		margin: 0;
+		padding: 0;
+	    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	}
+	.navbar-nav .dropdown-menu a {
+		color: var(--whiteClr);
+	    font-size: 14px;
+		padding: .15rem 0 .15rem 35px;
+	}
+	.dropdown-item:focus, .dropdown-item:hover, .dropdown-item.activre {
+	    background: transparent;
+	    color: var(--primaryClr) !important;
+	}
+	.right_menu > div {
+		margin-right: 15px;
+	}
+	.soccer-horseRacing-box ul li a {
+	    min-width: 140px;
+    	padding: 5px 15px;
+	}
+	.cornerBG {
+    	height: 25px;
+    }
+    .carousel-item>img {
+	    height: calc(100vh - 125px);
+	}
+	.carousel-indicators {
+	    bottom: 25px;
+	}
+	.navbar .social-links {
+		margin-left: 0;
+	}
+	.dashboard .top-bar li {
+		flex: 1;
+	}
+	.liveSec .match-details ul li .teams div:first-child img {
+	    margin-right: 10px;
+	}
+	.liveSec .match-details ul li .teams div:last-child img {
+	    margin-left: 10px;
+	}
+	.addAndWithdrawCash a {
+	    padding-left: 10px !important;
+	    padding-right: 10px !important;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.home_banner .carousel-caption {
+	    top: 10%;
+	}
+	.home_banner .carousel-indicators {
+	    bottom: 15px;
+	}
+	.site_gray_tabs .nav-item:last-child .btn_gray {
+		margin-right: 0;
+	}
+	.site_gray_tabs .btn_gray{
+		min-width: 60px;
+		padding: 6px 10px;
+	}
+	.soccer-horseRacing .img-caption {
+	    padding: 15px;
+	}
+	.soccer-horseRacing .img-caption p {
+	    margin-bottom: 5px;
+	}
+	.soccer-horseRacing-box ul li a img {
+    	width: 40px;
+    }
+	.cornerBG .soccer-horseRacing-box {
+		top: 22px;
+	}
+	.premier-leagues {
+	    padding: 60px 0 30px;
+	}
+	.download-btn {
+	    padding: 4px 10px;
+	}
+	.download-btn p {
+	    line-height: 15px;
+	}
+	.footer ul {
+		flex-wrap: wrap;
+	}
+	.footer ul li {
+		padding: 5px 0;
+	}
+	.footer ul li a {
+		padding: 5px 18px;
+	}
+	.footer ul li a::after {
+		content: none;
+	}
+	.soccer-horseRacing .img-caption p {
+		line-height: inherit;
+	}
+	.dashboard .tab-pane .time span i {
+		margin-right: 2px;
+	}
+	.burger {
+	    padding: 30px 0;
+	}
+	.liveSec .teamAndTime img {
+	    margin: 0 10px 0 0 !important;
+	}
+	.liveSec .teamAndTime span:nth-child(2) {
+	    max-width: 65px;
+        min-width: 65px;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	}
+	.liveSec .teamAndTime span:last-child {
+	    padding-left: 10px;
+	}
+	.liveSec .bgClr {
+		padding: 10px;
+	}
+	.liveSec .match-details ul li .teams div {
+	    display: flex;
+	}
+	.liveSec .match-details ul li .teams div:last-child {
+	    justify-content: flex-end;
+	}
+	.liveSec .match-details ul li .teams .playerName {
+		max-width: 85px;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;	
+	}
+	.liveSec .bgClr > div:nth-child(2) {
+	    flex: 0 0 35%;
+	}
+	.table thead tr th, .leaderboard_table tbody tr td {
+	    min-width: 105px;
+	}
+	.leaderboard_table thead tr th:nth-child(1), .leaderboard_table tbody tr td:nth-child(1),
+	.leaderboard_table thead tr th:nth-child(2), .leaderboard_table tbody tr td:nth-child(2) {
+	    min-width: 55px;
+	}
+	.leaderboard_table thead tr th:nth-child(3), .leaderboard_table tbody tr td:nth-child(3) {
+	    min-width: 170px;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	}
+	.leaderboard_table thead tr th:last-child, .leaderboard_table tbody tr td:last-child {
+	    min-width: 75px;
+	}
+	ul.account_grid {
+	    flex-wrap: wrap;
+	}
+	ul.account_grid li:nth-child(3), ul.account_grid li:nth-child(4) {
+		margin-top: 5px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.setting-bar {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.dashboard .top-bar {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.banner .carousel-caption h1 {
+		font-size: 2.25em;
+	}
+	.cornerBG {
+    	height: 20px;
+    }
+    .social-links a {
+	    width: 30px;
+	    height: 30px;
+	    line-height: 25px;
+	}
+	.social-links a i {
+		font-size: 14px;
+	}
+	.match-details ul li div {
+	    flex: 0 0 25%;
+	}
+	.match-details ul li div:nth-child(2) {
+	    flex: 0 0 50%;
+	}
+	.match-details ul li {
+	    padding: 10px 30px 10px 15px;
+	}
+	.match-details ul li .teams div:first-child, .match-details ul li .teams div:last-child {
+		display: flex;
+		align-items: center;
+	}
+	.match-details ul li .teams div:first-child {
+		flex-direction: column;
+	}
+	.match-details ul li .teams div:last-child {
+		flex-direction: column-reverse;
+	}
+	.match-details ul li .teams div:first-child img {
+	    margin-right: 0;
+	}
+	.match-details ul li .teams div:last-child img {
+	    margin-left: 0;
+	}
+	.standings tbody {
+	    max-height: 420px;
+	}
+	.player-details .top-bar:first-child::before {
+	    height: 65px;
+	    top: 0;
+		border: 1px solid var(--primaryClr);
+    	border-radius: 5px 0 0 0;
+	}
+	.liveSec .match-details ul li {
+		margin-bottom: 10px;
+	    box-shadow: 0 1px 6px 0 rgba(255, 255, 255, .12);
+	}
+	.liveSec .match-details ul li::before {
+	    content: "";
+	    height: 104px;
+	}
+	.liveSec .teamAndTime {
+		justify-content: space-around;
+	    border-radius: 5px 5px 0 0;
+	}
+	.liveSec .match-details ul li .teamAndTime:first-child {
+	    flex: 0 0 100%;
+	    margin-right: 0;
+	}
+	.liveSec .match-details ul li .bgClr {
+	    border-radius: 0 0 5px 5px;
+	}
+	.liveSec .match-details ul li .bgClr:last-child {
+	    flex: 0 0 100%;
+	}
+	.liveSec .match-details ul li .teams div:first-child img {
+	    margin-right: 0px;
+	}
+	.liveSec .match-details ul li .teams div:last-child img {
+	    margin-left: 0px;
+	}
+	.liveSec .enter {
+		top: 72%;
+	}
+	.leaderboard .nav-tabs .nav-item {
+	    flex: 0 0 110px;
+	}
+	.leaderboard .nav-tabs .nav-item .nav-link {
+	    padding: 15px 5px;
+	}
+	.live-result-inner .timeLimit .fullTime, .live-result-inner .timeLimit .halfTime {
+		padding: 10px 0;
+	}
+	.creditedScore tr th:first-child, .creditedScore tr td:first-child {
+		min-width: 100px;
+	}
+	.creditedScore tr th:nth-child(2), .creditedScore tr td:nth-child(2) {
+		min-width: 150px;
+	}
+	.creditedScore tr th:nth-child(3), .creditedScore tr td:nth-child(3) {
+		min-width: 300px;
+	}
+	.dashboard .nav-tabs .nav-item {
+	    flex: 0 0 110px;
+	}
+	.player-details .top-bar {
+	    flex-direction: inherit;
+	    align-items: center;
+	}
+	.dashboard .top-bar li {
+		display: flex;
+	    justify-content: center;
+	}
+	.dashboard .top-bar li span {
+	    flex: 0 0 48%;
+	}
+	.dashboard .top-bar li span:nth-child(2) {
+	    flex: 0 0 2%;
+	    margin: 0;
+	}
+	.addAndWithdrawCash {
+	    flex-direction: column;
+	}
+	.addAndWithdrawCash .addCash {
+		margin-bottom: 8px;
+	}
+	.my_account .nav.nav-tabs .nav-item {
+	    flex: 0 0 50%;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.setting-bar .pools li{
+		width: 100%;
+		margin-right: 0;
+	}
+	.top-head .right-site{
+		justify-content: center;
+	}
+	.liveSec .date-wise .info{
+		justify-content: center;
+	}
+	#testimonial-slider .carousel-control-next-icon img, 
+	#testimonial-slider .carousel-control-prev-icon img{
+		height: 100%;
+	}
+	.notification .dropdown-menu {
+		left: 131px;
+	}
+	.notification .dropdown-menu:after {
+	    left: 56%;
+    	right: auto;
+	}
+	.news .news-details {
+		display: block;
+		padding: 30px 6px 15px 15px;
+	}
+	.news .news-details ul:last-child {
+		margin-top: 15px;
+	}
+	.footer ul {
+		padding-bottom: 15px;		
+	}
+	.cornerBG .soccer-horseRacing-box {
+		top: 21px;
+	}
+	.cntr-line {
+		margin: 30px 0 !important;
+	}
+	.home_banner .carousel-caption{
+	    top: 12%;
+	    left: 0;
+	    width: 100%;
+	}
+	.loginModal .modal-body, .signUpModal .modal-body {
+	    padding: 2rem 1.5rem;
+	}
+	.loginModal .modal-header, .signUpModal .modal-header {
+	    padding: 1rem 1rem 1rem 1.5rem;
+	}
+	.loginWithSocial a {
+	    min-width: 115px;
+	}
+	.dashboard .nav-tabs {
+		margin-top: 15px;
+	}
+	.dashboard .tab-pane .time {
+		text-align: center; 
+	}
+	.match-details ul li div {
+	    flex: 0 0 50%;
+	}
+	.match-details ul li div:nth-child(2) {
+	    flex: 0 0 100%;
+	    margin-top: 15px;
+		order: 2;
+	}
+	.match-details ul li div:nth-child(2) > div:nth-child(2) {
+	    margin-top: 0;
+	}
+	.match-details ul li div:first-child {
+		order: 0;
+	}
+	.match-details ul li div:last-child {
+		order: 2;
+	}
+	.match-details ul li::before {
+	    height: 99px;
+	}
+	.enter {
+	    top: 50%;
+	}
+	.timeLimit {
+		padding: 0;
+		margin: 15px 0;
+	}
+	.timeLimit > div {
+		display: flex;
+	}
+	.timeLimit .fullTime {
+	    width: 47%;
+    	margin-right: 3%;
+	}
+	.timeLimit .halfTime {
+	    width: 47%;
+	    margin: 0 0 0 3%;
+	    padding: 10px 5px;
+	}
+	.timeLimit .form-check {
+	    justify-content: center;
+	}
+	.timeLimit .halfTime::before{
+	    top: -6px;
+	    left: 50%;
+	    transform: translate(-50%, -50%) rotate(270deg);
+	}
+	.player-details .btm-bar a {
+	    padding: 2px 10px;
+	}
+	.round-slider .slick-prev {
+	    left: -15px;
+	}
+	.round-slider .slick-next {
+	    right: -15px;
+	}
+	.top-head .right-site {
+	    margin-bottom: 10px;
+    	order: -1;
+	}
+	.liveSec .match-details ul li .bgClr {
+		margin-top: 0;
+	}
+	.liveSec .match-details ul li div:nth-child(2) {
+		margin-top: 0;
+	}
+	.liveSec .match-details ul li .bgClr {
+		flex-wrap: wrap;
+	}
+	.liveSec .bgClr > div:first-child {
+	    flex: 0 0 100%;
+	}
+	.liveSec .bgClr > div:nth-child(2) {
+	    flex: 0 0 100%;
+	    margin-top: 10px !important;
+	}
+	.liveSec .enter {
+	    top: 65%;
+	}
+	.liveSec .match-details ul li::before {
+	    height: 135px;
+	}
+	.liveSec .teamAndTime span:nth-child(2) {
+		min-width: 180px;
+	}
+	.leaderboard .nav-tabs {
+		margin-top: 0;
+	}
+	.leaderboard .nav-tabs .nav-item {
+	    flex: 0 0 100px;
+	}
+	.styled-checkbox:checked+label:after {
+	    left: 10px !important;
+	}
+	.live-result-inner .matchStatus .updated {
+	    margin-bottom: 10px;
+	}
+	.live-result-inner .timeLimit .fullTime, .live-result-inner .timeLimit .halfTime {
+		width: 100%;
+		flex-direction: column;
+	}
+	.live-result-inner .timeLimit {
+		margin: 10px 0 0;
+	}
+	.live-result-inner .timeLimit .checkBox {
+		justify-content: center;
+	}
+	.top-head {
+	    padding: 10px 0 10px 15px;
+	}
+	ul.account_grid li {
+	    flex-direction: column;
+	}
+	ul.account_grid li > div {
+		margin-right: 0 !important;
+	}
+	ul.account_grid li > div img {
+		width: 35px;
+		margin-bottom: 7px;
+	}
+	.modal-dialog {
+		margin: .5rem auto;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.frofile-head {
+	    flex-direction: column;
+		text-align: center;
+	}
+	.profile-img img {
+	    width: 50px;
+	    height: 50px;
+	    margin-bottom: 10px;
+	}
+	.profile_upload_btn input {
+	    width: 50px;
+    	height: 50px;
+	}
+	.leaderboard .nav-tabs .nav-item {
+	    flex: 0 0 85px;
+	}
+	.banner .carousel-caption h1 {
+		font-size: 2em;
+	}
+	.my_account .site_box {
+	    padding: 15px;
+	}
+	.accountImg img {
+	    width: 50px;
+	    height: 50px;
+	}
+	ul.account_grid li {
+	    flex: 0 0 48%;
+		margin-right: 2%;
+		padding: 14px 4px;
+	}
+	.top-header-title h3 {
+	    font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.leaderboard .nav-tabs .nav-item {
+	    flex: 0 0 70px;
+	}
+	.add_money button {
+		min-width: 80px;
+	    padding: 6px;
+    	margin: 0 2px;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.leaderboard .nav-tabs .nav-item {
+	    flex: 0 0 60px;
+	}
+	.applyBox a.btn_primary  {
+	    min-width: 65px;
+	}
+}
+
+@media screen and (max-width: 359px) {
+	.leaderboard .nav-tabs .nav-item {
+	    flex: 0 0 50px;
+	}
+	.banner .carousel-caption h1 {
+	    font-size: 1.75em;
+	}
+	.accountHolder {
+	    flex-direction: column;
+	    text-align: center;
+	}
+	.accountImg {
+	    margin-right: 0;
+	    margin-bottom: 10px;
+	}
+	.my_account .nav.nav-tabs .nav-link {
+	    padding: 8px 7px;
+	}
+	.purchase_modal .modal-body {
+	    padding: 20px;
+	}
+}

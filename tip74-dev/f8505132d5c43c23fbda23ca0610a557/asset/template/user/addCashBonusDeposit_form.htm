@@ -1,0 +1,33 @@
+<div class="modal-body">
+	<div class="form-area">
+
+		<div class="form-group">
+			<div id="picture-box" class="picture-box">
+				<img ng-src="{{formData.ProfilePic}}" alt="User Image" class="thumbnail rounded-circle">
+				<p class="mt-2"><strong ng-bind="formData.FullName"></strong></p>
+				<div ng-bind="formData.UserTypeName"></div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<label class="control-label">Amount</label>
+					<input type="text" name="Amount" class="form-control numeric" >
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+</div>
+
+<div class="modal-footer">
+	<input type="hidden" name="UserGUID" value="{{formData.UserGUID}}">   
+	<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+	<button type="submit" class="btn btn-success btn-sm" ng-disabled="editDataLoading" ng-click="addCashDeposit()">Save</button>
+</div>
+
+

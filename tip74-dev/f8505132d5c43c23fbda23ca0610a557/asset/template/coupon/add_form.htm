@@ -1,0 +1,149 @@
+<div class="modal-body">
+	<div class="form-area">
+
+
+		<div class="form-group">
+			<div id="picture-box" class="picture-box banner">
+				<!-- picture display -->
+				<img id="picture-box-picture" ng-src="./asset/img/default-coupon.png">
+
+				<!-- picture upload form -->
+				<div class="picture-upload">
+					<img src="./asset/img/upload.svg" id="picture-uploadBtn">
+					<form enctype="multipart/form-data" action="../api/upload/image" method="post" name="picture_upload_form" id="picture_upload_form">
+						<input type="hidden" name="Section" value="Coupon">
+						<input type="file" accept="image/*" name="File" id="fileInput" data-target="#picture-box #picture-box-picture" data-targetinput="#MediaGUIDs">
+					</form>
+				</div>
+				<!-- progressbar -->
+				<div class="progressBar">
+					<div class="bar"></div>
+					<div class="percent">0%</div>
+				</div>
+			</div>
+		</div>
+		
+		<form id="add_form" name="add_form" autocomplete="off" >
+			<div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label class="control-label">Coupon Code</label>
+						<input name="CouponCode" type="text" class="form-control" value="">
+					</div>
+				</div>
+
+
+				<div class="col-md-3">
+					<div class="form-group">
+						<label class="control-label">Coupon Value</label>
+						<input name="CouponValue" type="text" class="form-control numeric">
+					</div>
+				</div>
+
+
+				<div class="col-md-3">
+					<div class="form-group">
+						<label class="control-label">Coupon Type</label>
+						<select name="CouponType" class="form-control chosen-select " >
+							<option value="Flat">Flat</option>
+							<option value="Percentage">Percentage</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<label class="control-label">Deposit Type</label>
+						<select name="DepositType" class="form-control chosen-select">
+							<option value="FirstDeposit">First Deposit</option>
+							<option value="AllDeposits">All Deposits</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+            <div class="row">
+                        <div class="col-md-3">
+					<div class="form-group">
+						<label class="control-label">Minimum Amount</label>
+						<input name="MiniumAmount" type="text" class="form-control numeric" maxlength="6">
+					</div>
+				</div>
+                        <div class="col-md-3">
+					<div class="form-group">
+						<label class="control-label">Maximum Amount</label>
+						<input name="MaximumAmount" type="text" class="form-control numeric" maxlength="6">
+					</div>
+				</div>
+                <div class="col-md-2">
+					<div class="form-group">
+						<label class="control-label">No. Of Uses</label>
+						<input name="NumberOfUses" type="text" class="form-control numeric" maxlength="6">
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label class="control-label">Valid Till</label>
+						<input type="text" class="form-control" id="CouponValidTillDate" name="CouponValidTillDate" >
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						<label class="control-label">Offer Type</label>
+						<select name="OfferType" class="form-control chosen-select">
+							<option value="CashBonus">Cash Bonus</option>
+							<option value="RealMoney">Real Money</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="form-group">
+						<label class="control-label">Coupon Title</label>
+						<input name="CouponTitle" type="text" class="form-control" value="" maxlength="40">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="control-label">Description</label>
+						<textarea name="CouponDescription" class="form-control" style="height:50px" maxlength="200"></textarea>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Status</label>
+						<select name="Status" id="Status" class="form-control chosen-select">
+							<option value="Active">Active</option>
+							<option value="Inactive">Inactive</option>
+						</select>
+					</div>
+				</div>
+				
+			</div>
+
+
+
+
+
+
+			<!-- hidden parameters -->
+			<input type="hidden" class="MediaGUIDs" id="MediaGUIDs" name="MediaGUIDs" value=""> <!-- for banner -->
+			<!-- hidden parameters /-->
+		</form>
+
+	</div>
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+	<button type="submit" class="btn btn-success btn-sm" ng-disabled="addDataLoading" ng-click="addData()">Save</button>
+</div>
+
+

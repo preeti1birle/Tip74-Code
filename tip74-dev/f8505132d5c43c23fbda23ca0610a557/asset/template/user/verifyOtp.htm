@@ -1,0 +1,20 @@
+<div class="modal-body">
+    <div class="form-area">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label">OTP</label>
+                    <input type="text" name="OTP" class="form-control numeric" >
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <input type="hidden" name="UserGUID" value="{{UserGUIDS}}">   
+    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+    <button type="submit" class="btn btn-success btn-sm" ng-disabled="editDataLoading" ng-click="verifyOTP(UserGUIDS)">Save</button>
+</div>
+
+

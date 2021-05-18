@@ -1,0 +1,146 @@
+<div class="modal-body">
+	<div class="form-area">
+		<div class="form-group">
+			<center><h3>{{formData.TeamName}}</h3></center>
+		</div>
+		<div class="form-group">
+			<form id="editTS_form" name="editTS_form" autocomplete="off" >
+                <!-- hidden parameters -->
+                    <lable><b>Overall</b></lable>
+                    <div class="row">                     
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Game Played</label>
+                                <input type="number" min="0" placeholder="Overall Game Played" id="OverallGamePlayed" class="form-control" name="OverallGamePlayed" ng-model="formData.TeamStandings.Overall.GamePlayed" value="{{formData.TeamStandings.Overall.GamePlayed}}">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Won</label>
+                                <input type="number" min="0" placeholder="Overall Won" id="OverallWon" class="form-control" name="OverallWon" ng-model="formData.TeamStandings.Overall.Won" value="{{formData.TeamStandings.Overall.Won}}">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label"> Draw</label>
+                                <input type="number" min="0" placeholder="Overall Draw" id="OverallDraw" class="form-control" name="OverallDraw" ng-model="formData.TeamStandings.Overall.Draw" value="{{formData.TeamStandings.Overall.Draw}}">
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="row"> 
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label"> Lost</label>
+                                <input type="number" min="0" placeholder="Overall Lost" id="OverallLost" class="form-control" name="OverallLost" ng-model="formData.TeamStandings.Overall.Lost" value="{{formData.TeamStandings.Overall.Lost}}">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label"> Goal For</label>
+                                <input type="number" min="0" placeholder="Overall Goal For" id="OverallGoalFor" class="form-control" name="OverallGoalFor" ng-model="formData.TeamStandings.Overall.GoalFor" value="{{formData.TeamStandings.Overall.GoalFor}}">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label"> Goal Against</label>
+                                <input type="number" min="0" placeholder="Overall Goal Against" id="OverallGoalAgainst" class="form-control" name="OverallGoalAgainst" ng-model="formData.TeamStandings.Overall.GoalAgainst" value="{{formData.TeamStandings.Overall.GoalAgainst}}">
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <hr>
+                    <label><b>Home</b></label>
+                    <div class="row"> 
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="control-label">Game Played</label>
+                                <input type="number" min="0" placeholder="Home Game Played" id="HomeGamePlayed" class="form-control" name="HomeGamePlayed" ng-model="formData.TeamStandings.Home.GamePlayed" value="{{formData.TeamStandings.Home.GamePlayed}}">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="control-label">Won</label>
+                                <input type="number" min="0" placeholder="Home Won" id="HomeWon" class="form-control" name="HomeWon" ng-model="formData.TeamStandings.Home.Won" value="{{formData.TeamStandings.Home.Won}}">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="control-label">Draw</label>
+                                <input type="number" min="0" placeholder="Home Draw" id="HomeDraw" class="form-control" name="HomeDraw" ng-model="formData.TeamStandings.Home.Draw" value="{{formData.TeamStandings.Home.Draw}}">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="control-label">Home Lost</label>
+                                <input type="number" min="0" placeholder="Home Lost" id="HomeLost" class="form-control" name="HomeLost" ng-model="formData.TeamStandings.Home.Lost" value="{{formData.TeamStandings.Home.Lost}}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                   <label><b>Away</b></label>
+                   <div class="row"> 
+                        <div class="col-md-3">
+    						<div class="form-group">
+    							<label class="control-label">Game Played</label>
+    							<input type="number" min="0" placeholder="Away Game Played" id="AwayGamePlayed" class="form-control" name="AwayGamePlayed" ng-model="formData.TeamStandings.Away.GamePlayed" value="{{formData.TeamStandings.Away.GamePlayed}}">
+    						</div>
+    					</div>
+                        <div class="col-md-3">
+    						<div class="form-group">
+    							<label class="control-label">Won</label>
+    							<input type="number" min="0" placeholder="Away Won" id="AwayWon" class="form-control" name="AwayWon" ng-model="formData.TeamStandings.Away.Won" value="{{formData.TeamStandings.Away.Won}}">
+    						</div>
+    					</div>
+    					<div class="col-md-3">
+    						<div class="form-group">
+    							<label class="control-label">Draw</label>
+    							<input type="number" min="0" placeholder="Away Draw" id="AwayDraw" class="form-control" name="AwayDraw" ng-model="formData.TeamStandings.Away.Draw" value="{{formData.TeamStandings.Away.Draw}}">
+    						</div>
+    					</div>
+    					<div class="col-md-3">
+    						<div class="form-group">
+    							<label class="control-label">Lost</label>
+    							<input type="number" min="0" placeholder="Away Lost" id="AwayLost" class="form-control" name="AwayLost" ng-model="formData.TeamStandings.Away.Lost" value="{{formData.TeamStandings.Away.Lost}}">
+    						</div>
+    					</div>
+                    </div>
+
+                    <hr>
+                   <label><b>Other</b></label>
+                   <div class="row"> 
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Points</label>
+                            <input type="number" min="0" placeholder="Points" id="Points" class="form-control" name="Points" ng-model="formData.TeamStandings.Points" value="{{formData.TeamStandings.Points}}">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Goal Difference</label>
+                            <input type="number" min="0" placeholder="Goal Difference" id="GoalDifference" class="form-control" name="GoalDifference" ng-model="formData.TeamStandings.GoalDifference" value="{{formData.TeamStandings.GoalDifference}}">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">Position</label>
+                            <input type="number" min="0" placeholder="Position" id="Position" class="form-control" name="Position" ng-model="formData.TeamStandings.Position" value="{{formData.TeamStandings.Position}}">
+                        </div>
+                    </div>
+
+                <input type="hidden" name="TeamGUID" value="{{formData.TeamGUID}}">
+
+				<!-- hidden parameters /-->
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal-footer">
+
+	<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+	<button type="submit" class="btn btn-success btn-sm" ng-disabled="editDataLoading" ng-click="editTeamStanding()">Save</button>
+</div>

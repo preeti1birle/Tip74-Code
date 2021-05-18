@@ -1,0 +1,68 @@
+<div class="modal-body">
+	<div class="form-area">
+
+		<form id="add_form" name="add_form" autocomplete="off" >
+				
+			<div class="row">
+                <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">League Join Date Time </label>
+                            <input name="Date" id="Date" readonly="" ng-model="Date" type="text" class="form-control" value="">
+                        </div>
+                    </div>
+            </div>
+
+			 <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="control-label">Title</label>
+                        <input name="Title" type="text" class="form-control" value="" maxlength="40">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Title</label>
+                        <select class="form-control chosen-select" name="Redirection">
+                            <option value="">Please Select</option>
+<!--                             <option value="Dfs">Cricket Dfs</option>
+                            <option value="Gully">Cricket Gully</option>
+                            <option value="Auction">Cricket Auction</option> -->
+                            <option value="FT-Dfs">Football Dfs</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" > 
+                    <input name="Push" type="checkbox" value="1"><label class="ml-1"> Push </label>
+                </div>
+                <div class="col-md-4" > 
+                    <input name="Normal" type="checkbox" value="1"><label class="ml-1"> Normal </label>
+                </div>
+                <!-- <div class="col-md-4" > 
+                    <input name="both" type="checkbox" value="1"><label class="ml-1"> Both </label>
+                </div> -->
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="control-label">Message</label>
+                        <textarea name="Text" id="editor" class="form-control" rows="10"></textarea>
+                    </div>
+                </div>
+            </div>
+
+		</form>
+
+	</div>
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+	<button type="submit" class="btn btn-success btn-sm" ng-disabled="addDataLoading" ng-click="addDataBroadcastScheduling()">Save</button>
+</div>
+
+

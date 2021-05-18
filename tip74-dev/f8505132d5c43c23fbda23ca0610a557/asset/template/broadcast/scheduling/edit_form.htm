@@ -1,0 +1,71 @@
+<div class="modal-body">
+	<div class="form-area">
+		<form id="edit_form" name="edit_form" autocomplete="off" >
+
+			<div class="row">
+                <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">League Join Date Time </label>
+                            <input name="Date" id="Date" readonly="" type="text" class="form-control" value="{{formData[0].Date}}">
+                        </div>
+                    </div>
+            </div>
+
+			 <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="control-label">Title</label>
+                        <input name="Title" type="text" class="form-control" value="{{formData[0].Title}}" maxlength="40">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Title</label>
+                        <select class="form-control chosen-select" name="Redirection">
+                            <option ng-selected="formData[0].Redirection == 'Head to Head' ? 'active' : ''" value="">Please Select</option>
+<!--                             <option ng-selected="formData[0].Redirection == 'Dfs' ? 'active' : ''" value="Dfs">Cricket Dfs</option>
+                            <option ng-selected="formData[0].Redirection == 'Gully' ? 'active' : ''" value="Gully">Cricket Gully</option>
+                            <option ng-selected="formData[0].Redirection == 'Auction' ? 'active' : ''" value="Auction">Cricket Auction</option> -->
+                            <option ng-selected="formData[0].Redirection == 'FT-Dfs' ? 'active' : ''" value="FT-Dfs">Football Dfs</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" > 
+                    <input name="Push" type="checkbox" ng-model="formData[0].Push" ng-checked="formData[0].Push == 1 ? 'active' : ''" value="1"><label class="ml-1"> Push </label>
+                </div>
+                <div class="col-md-4" > 
+                    <input name="Normal" type="checkbox" ng-model="formData[0].Normal" ng-checked="formData[0].Normal == 1 ? 'active' : ''" value="1"><label class="ml-1"> Normal </label>
+                </div>
+                <!-- <div class="col-md-4" > 
+                    <input name="both" type="checkbox" value="1"><label class="ml-1"> Both </label>
+                </div> -->
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="control-label">Message</label>
+                        <textarea name="Text" id="editor" class="form-control" rows="10">{{formData[0].Text}}</textarea>
+                    </div>
+                </div>
+            </div>
+
+			<!-- hidden parameters -->
+			<input type="hidden" name="ID" value="{{formData[0].ID}}">   
+			<!-- hidden parameters /-->
+		</form>
+
+	</div>
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+	<button type="submit" class="btn btn-success btn-sm" ng-disabled="editDataLoading" ng-click="editData()">Save</button>
+</div>
+
+

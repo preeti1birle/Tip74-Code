@@ -1,0 +1,103 @@
+<div class="modal-body">
+	<div class="form-area">
+
+		<div class="form-group">
+			<div id="picture-box" class="picture-box">
+				<img ng-src="{{formData.ProfilePic}}" alt="User Image" class="thumbnail rounded-circle">
+				<p class="mt-2"><strong ng-bind="formData.FullName"></strong></p>
+				<div ng-bind="formData.UserTypeName"></div>
+			</div>
+		</div>
+
+
+
+		<div class="form-group">
+			<p class="mt-2"><strong>PAN Card</strong></p>
+			<hr>
+		</div>
+		<div class="row" ng-show="(formData.MediaPAN | json) != '{}'">
+			<div class="col-sm-3">
+				<div class="form-group">
+					<img ng-src="{{formData.MediaPAN.MediaThumbURL}}">
+				</div>	
+			</div>
+			<div class="col-sm-5">
+				<div class="form-group">
+					<label class="control-label">Name</label>
+					<p class="text-muted">{{formData.MediaPAN.MediaCaption.FullName}}</p>
+				</div>
+				<div class="form-group">
+					<label class="control-label">Account Number</label>
+					<p class="text-muted">{{formData.MediaPAN.MediaCaption.PanCardNumber}}</p>
+				</div>
+				<div class="form-group">
+					<label class="control-label">IFSC Code</label>
+					<p class="text-muted">{{formData.MediaPAN.MediaCaption.CountryCode}}</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="form-group">
+					<select name="PanStatus" id="PanStatus" ng-model="PanStatus" class="form-control chosen-select" ng-change="verifyDetails(formData.UserGUID,'PAN',PanStatus)" >
+						<option value="">Please Select</option>
+						<option value="Pending" ng-selected="formData.PanStatus=='Pending'">Pending</option>
+						<option value="Verified" ng-selected="formData.PanStatus=='Verified'">Verified</option>
+						<option value="Rejected" ng-selected="formData.PanStatus=='Rejected'">Rejected</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row" ng-show="(formData.MediaPAN | json) == '{}'" >
+			<div class="col-sm-6">
+				<p>-</p>
+			</div>
+		</div>
+		<div class="form-group">
+			<p class="mt-2"><strong>BANK Info</strong></p>
+			<hr>
+		</div>
+		<div class="row" ng-show="(formData.MediaBANK | json) != '{}'" >
+			<div class="col-sm-3">
+				<div class="form-group">
+					<img ng-src="{{formData.MediaBANK.MediaThumbURL}}">
+				</div>	
+			</div>
+			<div class="col-sm-5">
+				<div class="form-group">
+					<label class="control-label">Name</label>
+					<p class="text-muted">{{formData.MediaBANK.MediaCaption.FullName}}</p>
+				</div>
+				<div class="form-group">
+					<label class="control-label">Account Number</label>
+					<p class="text-muted">{{formData.MediaBANK.MediaCaption.AccountNumber}}</p>
+				</div>
+				<div class="form-group">
+					<label class="control-label">IFSC Code</label>
+					<p class="text-muted">{{formData.MediaBANK.MediaCaption.IFSCCode}}</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="form-group">
+					<select name="BankStatus" id="BankStatus" ng-model="BankStatus" class="form-control chosen-select" ng-change="verifyDetails(formData.UserGUID,'BANK',BankStatus)">
+						<option value="">Please Select</option>
+						<option value="Pending" ng-selected="formData.BankStatus=='Pending'">Pending</option>
+						<option value="Verified" ng-selected="formData.BankStatus=='Verified'">Verified</option>
+						<option value="Rejected" ng-selected="formData.BankStatus=='Rejected'">Rejected</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row" ng-show="(formData.MediaBANK | json) == '{}'" >
+			<div class="col-sm-6">
+				<p>-</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal-footer">
+	<input type="hidden" name="UserGUID" value="{{formData.UserGUID}}">   
+	<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+	<!-- <button type="submit" class="btn btn-success btn-sm" ng-disabled="editDataLoading" ng-click="editData()">Save</button> -->
+</div>
+
+

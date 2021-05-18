@@ -1,0 +1,40 @@
+<div class="modal-body">
+	<div class="form-area">
+		<div class="form-group">
+			<form id="add_form" name="add_form" autocomplete="off" >
+				<!-- hidden parameters -->
+				<div class="row"> 
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">No. Of Entries</label>
+							<input type="number" placeholder="No. Of Entries" class="form-control" name="NoOfEntries" ng-model="EditInfo.NoOfEntries" value="{{EditInfo.NoOfEntries}}" min='0'>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">No. Of Prediction</label>
+							<input type="number" placeholder="No. Of Prediction" class="form-control" name="NoOfPrediction" ng-model="EditInfo.NoOfPrediction" value="{{EditInfo.NoOfPrediction}}" min='0'>
+						</div>
+                    </div>
+                    <div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">No. Of Double Ups</label>
+							<input type="number" placeholder="No. Of Double Ups" class="form-control" name="NoOfDoubleUps" ng-model="EditInfo.NoOfDoubleUps" value="{{EditInfo.NoOfDoubleUps}}" min='0'>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Entries Amount</label>
+							<input type="number" placeholder="Entries Amount" class="form-control" name="EntriesAmount" ng-model="EditInfo.EntriesAmount" value="{{EditInfo.EntriesAmount}}" min='0'>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+	<button type="submit" class="btn btn-success btn-sm" ng-disabled="editDataLoading" ng-click="addData()">Add</button>
+</div>

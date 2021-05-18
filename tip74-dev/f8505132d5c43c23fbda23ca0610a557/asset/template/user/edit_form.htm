@@ -1,0 +1,75 @@
+<div class="modal-body">
+	<div class="form-area">
+
+		<div class="form-group">
+			<div id="picture-box" class="picture-box">
+				<img ng-src="{{formData.ProfilePic}}" alt="User Image" class="thumbnail rounded-circle">
+				<p class="mt-2"><strong ng-bind="formData.FullName"></strong></p>
+				<div ng-bind="formData.UserTypeName"></div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label class="control-label">Status</label>
+					<select name="Status" id="Status" class="form-control chosen-select">
+						<option value=""></option>
+						<option value="Pending" ng-selected="formData.Status=='Pending'">Pending</option>
+						<option value="Verified" ng-selected="formData.Status=='Verified'">Verified</option>
+						<option value="Deleted" ng-selected="formData.Status=='Deleted'">Deleted</option>
+						<option value="Blocked" ng-selected="formData.Status=='Blocked'">Blocked</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label class="control-label">Private Contest Name</label>
+					<select name="IsPrivacyNameDisplay" id="IsPrivacyNameDisplay" ng-model="formData.IsPrivacyNameDisplay" class="form-control chosen-select">
+						<option value="">Please Select</option>
+						<option value="Yes" ng-selected="formData.IsPrivacyNameDisplay=='Pending'">Yes</option>
+						<option value="No" ng-selected="formData.IsPrivacyNameDisplay=='No'">No</option>
+					</select>
+					<small>Allow private contest name to be displayed?</small>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label class="control-label">Withdrawal Accept</label>
+					<select name="isWithdrawal" id="isWithdrawal" class="form-control chosen-select">
+						<option value=""></option>
+						<option value="Yes" ng-selected="formData.isWithdrawal=='Yes'">Yes</option>
+						<option value="No" ng-selected="formData.isWithdrawal=='No'">No</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label class="control-label">My Referral Code</label>
+					<!-- <select name="isWithdrawal" id="isWithdrawal" class="form-control chosen-select">
+						<option value=""></option>
+						<option value="Yes" ng-selected="formData.isWithdrawal=='Yes'">Yes</option>
+						<option value="No" ng-selected="formData.isWithdrawal=='No'">No</option>
+					</select> -->
+					<input type="text" name="ReferralCode" ng-model="formData.ReferralCode" class="form-control"> 
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+</div>
+
+<div class="modal-footer">
+	<input type="hidden" name="UserGUID" value="{{formData.UserGUID}}">   
+	<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+	<button type="submit" class="btn btn-success btn-sm" ng-disabled="editDataLoading" ng-click="editData()">Save</button>
+</div>
+
+

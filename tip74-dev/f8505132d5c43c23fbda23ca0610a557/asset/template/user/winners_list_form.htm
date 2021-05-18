@@ -1,0 +1,30 @@
+<div class="modal-body">
+	<div class="form-area">
+
+		<div class="form-group">
+			<div id="picture-box" class="picture-box">
+				<img ng-src="{{formData.ProfilePic}}" alt="User Image" class="thumbnail rounded-circle">
+				<p class="mt-2"><strong ng-bind="formData.FullName"></strong></p>
+				<div ng-bind="formData.UserTypeName"></div>
+			</div>
+		</div>
+
+
+
+		<div class="form-group">
+			<p class="mt-2"><strong>Custom Winnings</strong></p>
+			<hr>
+		</div>
+		<div class="row" ng-show="formData.CustomWinnings">
+			
+		</div>
+	</div>
+</div>
+
+<div class="modal-footer">
+	<input type="hidden" name="UserGUID" value="{{formData.UserGUID}}">   
+	<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+	<!-- <button type="submit" class="btn btn-success btn-sm" ng-disabled="editDataLoading" ng-click="editData()">Save</button> -->
+</div>
+
+

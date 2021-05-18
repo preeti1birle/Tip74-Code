@@ -1,0 +1,11 @@
+zzzxzzzzzzzzzzzzzzzzz1) To Get Series (Once a Day) -- 0 0 * * * wget -qO- http://mwdemoserver.com/520-draft/api/utilities/getSeriesLive
+
+2) To Get Series Matches & Teams (In Every Six hours) -- 0 */6 * * * wget -qO- http://mwdemoserver.com/520-draft/api/utilities/getMatchesLive
+
+3) To Get Match Players (In Every Six hours) -- 0 */6 * * * wget -qO- http://mwdemoserver.com/520-draft/api/utilities/getPlayersLive
+
+4) To Get Players Stats (In Every Six hours) -- 0 */6 * * * wget -qO- http://mwdemoserver.com/520-draft/api/utilities/getPlayerStatsLive
+
+5) To Get Match live scoring & calculate points data (In Every Five Minutes) -- */5 * * * * wget -qO- http://mwdemoserver.com/520-draft/api/utilities/getMatchScoreLive
+
+6) To Auto Cancel Match Contest (In Every Five Minutes) -- */15 * * * * wget -qO- http://mwdemoserver.com/520-draft/api/utilities/autoCancelContest
